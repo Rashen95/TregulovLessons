@@ -114,3 +114,53 @@ non-static метод, который принимает в параметре �
 выводит на экран информацию о радиусе, площади круга и длине
 окружности. Используйте все 3 метода во 2-м классе.
 ```
+## Lesson 9 (HomeWork)
+```
+1. Напишите программу, в которой будет созданно 8 объектов, но к
+последней строке метода main останется всего 2.
+2. Вычислите устно output-ы данных программ, а затем проверьте в
+NetBeans:
+2.1
+class Test1{
+int a=1;
+static int a=2;
+void abc(int a){
+System.out.println(a);
+System.out.println(this.a);
+}
+public static void
+main(String [] args){
+Test1 t = new Test1();
+t.abc(3);
+}
+}
+2.2
+class Test2{
+int a=1;
+static int b=2;
+static void abc(final int a){
+System.out.println(a);
+System.out.println(Test2.b);
+}
+public static void
+main(String [] args){
+abc(5);
+}
+}
+2.3
+class Test3{
+int a=1;
+static int b=2;
+void abc(int a){
+System.out.println(b);
+System.out.println(a);
+System.out.println(this.a);
+System.out.println(Test3.b);
+}
+public static void
+main(String [] args){
+Test3 t = new Test3();
+t.abc(4);
+}
+}
+```
