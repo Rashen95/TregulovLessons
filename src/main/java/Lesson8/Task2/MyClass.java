@@ -7,7 +7,7 @@ public class MyClass {
         System.out.println("Площадь: " + radius * radius * p);
     }
 
-    void circumference(int radius) {
+    static void circumference(int radius) {
         System.out.println("Длина окружности: " + 2 * radius * p);
     }
 
