@@ -17,9 +17,11 @@ public class Task1 {
                     indexMin = j;
                 }
             }
-            int temp = array[i];
-            array[i] = array[indexMin];
-            array[indexMin] = temp;
+            if (indexMin != i) {
+                int temp = array[i];
+                array[i] = array[indexMin];
+                array[indexMin] = temp;
+            }
         }
         return array;
     }
