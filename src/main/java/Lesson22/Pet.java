@@ -3,8 +3,8 @@ package Lesson22;
 public class Pet extends Animal {
 
     private String name;
-    private final int tail = 1;
-    private final int paw = 4;
+    private int tail = 1;
+    private int paw = 4;
 
     public Pet() {
         System.out.println("I am pet");
@@ -20,7 +20,10 @@ public class Pet extends Animal {
     }
 
     public String getName() {
-        return name;
+        if (this.name != null) {
+            return new String(this.name);
+        }
+        return null;
     }
 
     public void setName(String name) {
@@ -33,5 +36,13 @@ public class Pet extends Animal {
 
     public int getPaw() {
         return paw;
+    }
+
+    public void setTail(int tail) {
+        this.tail = tail;
+    }
+
+    public void setPaw(int paw) {
+        this.paw = paw;
     }
 }

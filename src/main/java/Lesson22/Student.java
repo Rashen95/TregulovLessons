@@ -6,7 +6,10 @@ public class Student {
     private int course;
 
     public StringBuilder getName() {
-        return name;
+        if (this.name != null) {
+            return new StringBuilder(this.name);
+        }
+        return null;
     }
 
     public void setName(StringBuilder name) {
