@@ -350,3 +350,102 @@ jumps").
 Создайте класс Test, в методе main которого выведите на экран количество лап
 объекта класса Dog и вызовите метод sleep объекта класса Cat.
 ```
+
+## Lesson 23 (HomeWork)
+
+```
+Test 1
+Каков будет результат компиляции и запуска класса Y?
+package p1;
+public class X{
+X() { }
+public void abc()
+{ System.out.println(‘X’);
+}
+}
+-------------------------------------------------------------------------------------------------
+package p2;
+import p1.*;
+public class Y extends X{
+Y()
+{ }
+public void abc()
+{ System.out.println(‘Y’); }
+public static void main(String[] args){
+Y y = new Y();
+y.abc();
+}
+}
+
+Test 2
+Каков будет результат компиляции и запуска класса Y?
+package p1;
+public class X{
+protected void abc() { System.out.println('X'); }
+}
+------------------------------------------------------------------------------------
+package p2;
+import p1.*;
+public class Y extends X {
+public void abc()
+{ System.out.println(‘Y'); }
+public void def()
+{ Y y = new Y(); y.abc(); }
+public void ghi()
+{ X x = new Y(); x.abc(); }
+public static void main(String[] args)
+{ Y a = new Y();
+a.abc(); a.def(); a.ghi();
+}
+}
+
+Test 3
+Каков будет результат компиляции и запуска классов X и Y?
+public class X{
+public X() { System.out.println(“X”); }
+public X(int i) { System.out.println(“X” + i); }
+private boolean abc() { return false; }
+public static void main(String[] args) {
+X x= new Y(18);
+System.out.println( x.abc() );
+}
+}
+class Y extends X{
+public Y(int i) { System.out.println(“Y”); }
+public boolean abc () { return true; }
+}
+
+Test 4
+Каков будет результат компиляции и запуска класса Test?
+class X {}
+class Y extends X {}
+public class Test {
+public static void abc(X x, Y y)
+{
+System.out.println(“privet");
+}
+public static void abc(Y y, X x)
+{
+System.out.println(“poka");
+}
+public static void main(String[] args) {
+Y a = new Y ();
+abc(a, a);
+}
+}
+
+Test 5
+Каков будет результат компиляции и запуска класса Test?
+class X{
+String s1 = “privet";
+}
+class Y extends X {
+boolean bool = false;
+}
+class Test {
+public static void main(String args[]) {
+X x = new Y ();
+System.out.println(x.s1 + “ ” + x.bool);
+}
+}
+```
