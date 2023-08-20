@@ -32,15 +32,13 @@ public class Lesson25 {
                 ((Lev) a).run();
                 ((Lev) a).speak();
                 System.out.println();
-            }
-            if (a instanceof Mechenosec) {
+            } else if (a instanceof Mechenosec) {
                 System.out.println(((Mechenosec) a).name);
                 a.eat();
                 a.sleep();
                 ((Mechenosec) a).swim();
                 System.out.println();
-            }
-            if (a instanceof Pingvin) {
+            } else if (a instanceof Pingvin) {
                 System.out.println(((Pingvin) a).name);
                 a.eat();
                 a.sleep();
@@ -58,8 +56,7 @@ public class Lesson25 {
                 ((Lev) s).run();
                 s.speak();
                 System.out.println();
-            }
-            if (s instanceof Pingvin) {
+            } else if (s instanceof Pingvin) {
                 System.out.println(((Pingvin) s).name);
                 ((Pingvin) s).eat();
                 ((Pingvin) s).sleep();
